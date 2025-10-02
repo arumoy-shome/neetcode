@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     def remove(nums: list[int], val: int) -> int:
         left = 0
@@ -9,6 +10,7 @@ class Solution:
                 left += 1
         return left
 
+
 class TestSolution(unittest.TestCase):
     def test_remove_1(self):
         nums = [1, 1, 2, 3, 4]
@@ -16,7 +18,7 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(Solution.remove(nums, val), 3)
 
     def test_remove_2(self):
-        nums = [0,1,2,2,3,0,4,2]
+        nums = [0, 1, 2, 2, 3, 0, 4, 2]
         val = 2
         self.assertEqual(Solution.remove(nums, val), 5)
 

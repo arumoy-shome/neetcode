@@ -11,11 +11,12 @@ class Solution:
         """
         left = 1
         for right in range(1, len(nums)):
-            if nums[right] != nums[right-1]:
+            if nums[right] != nums[right - 1]:
                 nums[left] = nums[right]
                 left += 1
 
         return left
+
 
 if __name__ == "__main__":
     assert Solution.pythonic([1, 2, 2, 3]) == 3
